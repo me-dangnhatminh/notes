@@ -1,0 +1,15 @@
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\c2_async-basics.exe
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\c2_async-basics.deps.json
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\c2_async-basics.runtimeconfig.json
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\c2_async-basics.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\c2_async-basics.pdb
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\c2_async-basics.csproj.AssemblyReference.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\c2_async-basics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\c2_async-basics.AssemblyInfoInputs.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\c2_async-basics.AssemblyInfo.cs
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\c2_async-basics.csproj.CoreCompileInputs.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\c2_async-basics.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\refint\c2_async-basics.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\c2_async-basics.pdb
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\c2_async-basics.genruntimeconfig.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\ref\c2_async-basics.dll
