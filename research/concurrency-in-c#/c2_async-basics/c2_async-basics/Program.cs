@@ -13,7 +13,11 @@ namespace C2AsyncBasics
             // await WaitingforaSetofTaskstoComplete.Run();
             // await WaitingforAnyTasktoComplete.Run();
             // await ProcessingTasksasTheyComplete.Run();
-            await AvoidingContextforContinuations.Run();
+            // await AvoidingContextforContinuations.Run();
+            // await HandlingExceptionsfromasyncvoidMethods.Run();
+            await CreatingaValueTask.Run();
+
+            Console.ReadKey();
         }
     }
 }

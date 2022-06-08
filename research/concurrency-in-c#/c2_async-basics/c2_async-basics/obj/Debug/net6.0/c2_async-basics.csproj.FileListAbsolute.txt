@@ -13,3 +13,12 @@ C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-i
 C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\c2_async-basics.pdb
 C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\c2_async-basics.genruntimeconfig.cache
 C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\ref\c2_async-basics.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\Nito.AsyncEx.Context.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\Nito.AsyncEx.Coordination.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\Nito.AsyncEx.Interop.WaitHandles.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\Nito.AsyncEx.Oop.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\Nito.AsyncEx.Tasks.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\Nito.Cancellation.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\Nito.Collections.Deque.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\bin\Debug\net6.0\Nito.Disposables.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c2_async-basics\c2_async-basics\obj\Debug\net6.0\c2_async-basics.csproj.CopyComplete

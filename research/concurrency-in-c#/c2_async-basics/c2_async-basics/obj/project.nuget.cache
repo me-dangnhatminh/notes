@@ -1,8 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "m94TEflvYd6jm5pk66D64TaLqh4AlhDAetu5Gnnl+If424zzIJnY1ylO0az+lFzgmzYD/0kHwn8tJtzKW+YvKw==",
+  "dgSpecHash": "opzw0RGyOTq5+NwZ7ouF97kyZKqDGh8YfwhlB2vW8S6bcHdZt9hWHAzTuxmrrOsD63IgERtU88kUP65v+vRhVA==",
   "success": true,
   "projectFilePath": "C:\\Users\\dangn\\OneDrive\\Máy tính\\MINH\\code\\MyCode\\notes\\research\\concurrency-in-c#\\c2_async-basics\\c2_async-basics\\c2_async-basics.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dangn\\.nuget\\packages\\nito.asyncex\\5.1.2\\nito.asyncex.5.1.2.nupkg.sha512",
+    "C:\\Users\\dangn\\.nuget\\packages\\nito.asyncex.context\\5.1.2\\nito.asyncex.context.5.1.2.nupkg.sha512",
+    "C:\\Users\\dangn\\.nuget\\packages\\nito.asyncex.coordination\\5.1.2\\nito.asyncex.coordination.5.1.2.nupkg.sha512",
+    "C:\\Users\\dangn\\.nuget\\packages\\nito.asyncex.interop.waithandles\\5.1.2\\nito.asyncex.interop.waithandles.5.1.2.nupkg.sha512",
+    "C:\\Users\\dangn\\.nuget\\packages\\nito.asyncex.oop\\5.1.2\\nito.asyncex.oop.5.1.2.nupkg.sha512",
+    "C:\\Users\\dangn\\.nuget\\packages\\nito.asyncex.tasks\\5.1.2\\nito.asyncex.tasks.5.1.2.nupkg.sha512",
+    "C:\\Users\\dangn\\.nuget\\packages\\nito.cancellation\\1.1.2\\nito.cancellation.1.1.2.nupkg.sha512",
+    "C:\\Users\\dangn\\.nuget\\packages\\nito.collections.deque\\1.1.1\\nito.collections.deque.1.1.1.nupkg.sha512",
+    "C:\\Users\\dangn\\.nuget\\packages\\nito.disposables\\2.2.1\\nito.disposables.2.2.1.nupkg.sha512",
+    "C:\\Users\\dangn\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512"
+  ],
   "logs": []
 }
