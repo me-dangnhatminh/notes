@@ -14,9 +14,12 @@ namespace c3_asynchronous_streams
     */
     internal class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            CreatingAsynchronousStreams.Run();
+            //CreatingAsynchronousStreams.Run();
+            //ConsumingAsynchronousStreams.Run();
+            //UsingLINQwithAsynchronousStreams.Run();
+            AsynchronousStreamsandCancellation.Run();
             Console.ReadKey();
         }
     }

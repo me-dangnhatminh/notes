@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "0JN4zpUNYAxq9DbCcT+BHHyuW8ITnkK1I9yiPyD82EQB7E+OgrmnhYdINKAAzB3VOG1QWiYjfSN5ZxZgyXO1Ng==",
+  "dgSpecHash": "fLT8rq+taqQH7gbyrlyyEfTsTjzziH0lSdpbI69OFcBPl/TUpAneB4aHWPyKWPVcyjLu7f0oIqrVGBipAnMEsw==",
   "success": true,
   "projectFilePath": "C:\\Users\\dangn\\OneDrive\\Máy tính\\MINH\\code\\MyCode\\notes\\research\\concurrency-in-c#\\c3_asynchronous-streams\\c3_asynchronous-streams\\c3_asynchronous-streams.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dangn\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "C:\\Users\\dangn\\.nuget\\packages\\system.linq.async\\6.0.1\\system.linq.async.6.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

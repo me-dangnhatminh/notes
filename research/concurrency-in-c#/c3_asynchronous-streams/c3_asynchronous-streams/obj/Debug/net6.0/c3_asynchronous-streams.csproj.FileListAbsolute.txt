@@ -13,3 +13,6 @@ C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-i
 C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\c3_asynchronous-streams.pdb
 C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\c3_asynchronous-streams.genruntimeconfig.cache
 C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\ref\c3_asynchronous-streams.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\bin\Debug\net6.0\System.Linq.Async.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\c3_asynchronous-streams.csproj.CopyComplete
