@@ -1,0 +1,15 @@
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\bin\Debug\net6.0\c3_asynchronous-streams.exe
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\bin\Debug\net6.0\c3_asynchronous-streams.deps.json
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\bin\Debug\net6.0\c3_asynchronous-streams.runtimeconfig.json
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\bin\Debug\net6.0\c3_asynchronous-streams.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\bin\Debug\net6.0\c3_asynchronous-streams.pdb
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\c3_asynchronous-streams.csproj.AssemblyReference.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\c3_asynchronous-streams.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\c3_asynchronous-streams.AssemblyInfoInputs.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\c3_asynchronous-streams.AssemblyInfo.cs
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\c3_asynchronous-streams.csproj.CoreCompileInputs.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\c3_asynchronous-streams.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\refint\c3_asynchronous-streams.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\c3_asynchronous-streams.pdb
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\c3_asynchronous-streams.genruntimeconfig.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c3_asynchronous-streams\c3_asynchronous-streams\obj\Debug\net6.0\ref\c3_asynchronous-streams.dll

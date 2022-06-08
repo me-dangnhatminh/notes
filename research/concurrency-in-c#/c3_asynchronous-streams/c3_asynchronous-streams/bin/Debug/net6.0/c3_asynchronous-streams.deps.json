@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "c3_asynchronous-streams/1.0.0": {
+        "runtime": {
+          "c3_asynchronous-streams.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "c3_asynchronous-streams/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
