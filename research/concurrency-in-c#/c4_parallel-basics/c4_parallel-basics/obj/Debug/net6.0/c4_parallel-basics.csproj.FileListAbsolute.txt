@@ -1,0 +1,15 @@
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\bin\Debug\net6.0\c4_parallel-basics.exe
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\bin\Debug\net6.0\c4_parallel-basics.deps.json
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\bin\Debug\net6.0\c4_parallel-basics.runtimeconfig.json
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\bin\Debug\net6.0\c4_parallel-basics.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\bin\Debug\net6.0\c4_parallel-basics.pdb
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\obj\Debug\net6.0\c4_parallel-basics.csproj.AssemblyReference.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\obj\Debug\net6.0\c4_parallel-basics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\obj\Debug\net6.0\c4_parallel-basics.AssemblyInfoInputs.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\obj\Debug\net6.0\c4_parallel-basics.AssemblyInfo.cs
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\obj\Debug\net6.0\c4_parallel-basics.csproj.CoreCompileInputs.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\obj\Debug\net6.0\c4_parallel-basics.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\obj\Debug\net6.0\refint\c4_parallel-basics.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\obj\Debug\net6.0\c4_parallel-basics.pdb
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\obj\Debug\net6.0\c4_parallel-basics.genruntimeconfig.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c4_parallel-basics\c4_parallel-basics\obj\Debug\net6.0\ref\c4_parallel-basics.dll
