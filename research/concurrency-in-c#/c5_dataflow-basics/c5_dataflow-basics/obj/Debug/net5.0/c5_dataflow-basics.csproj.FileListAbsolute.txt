@@ -1,0 +1,16 @@
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\bin\Debug\net5.0\c5_dataflow-basics.exe
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\bin\Debug\net5.0\c5_dataflow-basics.deps.json
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\bin\Debug\net5.0\c5_dataflow-basics.runtimeconfig.json
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\bin\Debug\net5.0\c5_dataflow-basics.runtimeconfig.dev.json
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\bin\Debug\net5.0\c5_dataflow-basics.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\bin\Debug\net5.0\c5_dataflow-basics.pdb
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\obj\Debug\net5.0\c5_dataflow-basics.csproj.AssemblyReference.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\obj\Debug\net5.0\c5_dataflow-basics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\obj\Debug\net5.0\c5_dataflow-basics.AssemblyInfoInputs.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\obj\Debug\net5.0\c5_dataflow-basics.AssemblyInfo.cs
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\obj\Debug\net5.0\c5_dataflow-basics.csproj.CoreCompileInputs.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\obj\Debug\net5.0\c5_dataflow-basics.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\obj\Debug\net5.0\refint\c5_dataflow-basics.dll
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\obj\Debug\net5.0\c5_dataflow-basics.pdb
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\obj\Debug\net5.0\c5_dataflow-basics.genruntimeconfig.cache
+C:\Users\dangn\OneDrive\Máy tính\MINH\code\MyCode\notes\research\concurrency-in-c#\c5_dataflow-basics\c5_dataflow-basics\obj\Debug\net5.0\ref\c5_dataflow-basics.dll

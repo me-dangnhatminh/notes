@@ -1,0 +1,34 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "c5_dataflow-basics/1.0.0": {
+        "dependencies": {
+          "System.Threading.Tasks.Dataflow": "5.0.0"
+        },
+        "runtime": {
+          "c5_dataflow-basics.dll": {}
+        }
+      },
+      "System.Threading.Tasks.Dataflow/5.0.0": {}
+    }
+  },
+  "libraries": {
+    "c5_dataflow-basics/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Threading.Tasks.Dataflow/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NBp0zSAMZp4muDje6XmbDfmkqw9+qsDCHp+YMEtnVgHEjQZ3Q7MzFTTp3eHqpExn4BwMrS7JkUVOTcVchig4Sw==",
+      "path": "system.threading.tasks.dataflow/5.0.0",
+      "hashPath": "system.threading.tasks.dataflow.5.0.0.nupkg.sha512"
+    }
+  }
+}

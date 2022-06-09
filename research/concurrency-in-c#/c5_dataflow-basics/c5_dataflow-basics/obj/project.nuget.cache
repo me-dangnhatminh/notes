@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "W2J+n1bJO6YWkeC1HA6kuSilQciPHQTdOfKsOPPNc7hghNRdxqTBK8OGYaXOgiYx/vSgN4o2KEuPm4kx9WQpCg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dangn\\OneDrive\\Máy tính\\MINH\\code\\MyCode\\notes\\research\\concurrency-in-c#\\c5_dataflow-basics\\c5_dataflow-basics\\c5_dataflow-basics.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dangn\\.nuget\\packages\\system.threading.tasks.dataflow\\5.0.0\\system.threading.tasks.dataflow.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
