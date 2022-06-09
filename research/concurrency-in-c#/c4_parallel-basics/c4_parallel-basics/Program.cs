@@ -11,7 +11,8 @@ namespace c4_parallel_basics
         public static void Main()
         {
             //ParallelProcessingofData.Run();
-            ParallelAggregation.Run();
+            //ParallelAggregation.Run();
+            ParallelInvocation.Run();
             Console.ReadKey();
         }
     }
