@@ -12,7 +12,8 @@ namespace c5_dataflow_basics
         static void Main(string[] args)
         {
             //LinkingBlocks.Run();
-            PropagatingErrors.Run();
+            //PropagatingErrors.Run();
+            UnlinkingBlocks.Run();
             Console.ReadKey();
         }
     }
@@ -104,6 +105,42 @@ namespace c5_dataflow_basics
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+    }
+}
+#endregion
+
+#region 5.3 Unlinking Blocks
+/* 5.1 Unlinking Blocks (Hủy liên kết các khối)
+ * Problem: Trong quá trình xử lý, bạn cần thay đổi cấu trúc luồng dữ liệu của mình. Đây là kịch bản nâng cao
+ * mà hầu như không cần thiết.
+ * Solution:
+ */
+namespace c5_dataflow_basics
+{
+    class UnlinkingBlocks
+    {
+        /* Để thay đổi bộ lọc trên một liên kết hiện có,
+         * bạn phải hủy liên kết cũ và tạo một liên kết mới với bộ lọc mới(option DataflowOptions.Append thành false)
+         */
+        public static async Task Run()
+        {
+            var multiplyBlock = new TransformBlock<int, int>(item => item * 2);
+            var subtractBlock = new TransformBlock<int, int>(item => item - 2);
+
+            IDisposable link = multiplyBlock.LinkTo(subtractBlock);
+            multiplyBlock.Post(1);
+            multiplyBlock.Post(2);
+
+            // Bỏ liên kết các chuỗi
+            // Data được đk có thể đã hoặc chưa đi qua link.
+            // Trong mã thực tế, hãy xem xét một khối đang sử dụng thay vì gọi Dispose;
+            link.Dispose();
+
+            // Sau khi hủy vẫn có thể liên kết lại, nhưng phải bắt đầu lại từ đầu
+            multiplyBlock.LinkTo(subtractBlock);
+            multiplyBlock.Post(1);
+
         }
     }
 }
