@@ -1,4 +1,5 @@
-﻿using System;
+﻿#region 5.0 Dataflow basics
+using System;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 
@@ -13,11 +14,13 @@ namespace c5_dataflow_basics
         {
             //LinkingBlocks.Run();
             //PropagatingErrors.Run();
-            UnlinkingBlocks.Run();
+            //UnlinkingBlocks.Run();
+            ThrottlingBlocks.Run();
             Console.ReadKey();
         }
     }
 }
+#endregion
 
 #region 5.1 Linking Blocks
 /* 5.1 Linking Blocks (liên kết các khối)
@@ -141,6 +144,38 @@ namespace c5_dataflow_basics
             multiplyBlock.LinkTo(subtractBlock);
             multiplyBlock.Post(1);
 
+        }
+    }
+}
+#endregion
+
+#region 5.4 Throttling Blocks
+/* 5.1 Throttling Blocks (Khối điều chỉnh)
+ * Problem: Ban có một kịch bản rẽ nhánh trong lưới luồng dữ liệu của mình và muốn dữ liệu chảy theo cách cân bằng tải (load-balancing)
+ * Solution: By default, 
+ */
+namespace c5_dataflow_basics
+{
+    class ThrottlingBlocks
+    {
+        /* Theo mặc định BoundCapacity được đặt thành DataflowBlockOptions.Unbounded -> điều này khiến khối mục tiêu đầu tiên lưu
+         * vào bộ đệm tất cả dữ liệu ngay cả khi nó chưa sẵn sàng để xử lý.
+         * 
+         * BoundCapacity có thể được đặt thành bất kỳ giá trị nào lớn hơn 0 (or tất nhiên, DataflowBlockOptions.Unbounded),
+         * miễn là các block target có thể theo kịp dữ liệu đến từ các khối nguồn, giá trị đơn giản là 1 sẽ đủ.
+         * 
+         * Bằng cách sử dụng BoundedCapacity cho các block trong mesh, bạn sẽ không đọc quá nhiều dữ liệu I/O cho đến khi mesh của bạn sẵn sàng
+         * và mesh của bạn sẽ không kết thúc việc lưu vào bộ đệm tất cả dữ liệu đầu vào trước khi có thể xử lý.
+         */
+        public static async Task Run()
+        {
+            var sourceBlock = new BufferBlock<int>();
+            var options = new DataflowBlockOptions { BoundedCapacity = 1 };
+            var targetBlockA = new BufferBlock<int>(options);
+            var targetBlockB = new BufferBlock<int>(options);
+
+            sourceBlock.LinkTo(targetBlockA);
+            sourceBlock.LinkTo(targetBlockB);
         }
     }
 }
