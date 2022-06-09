@@ -12,7 +12,8 @@ namespace c4_parallel_basics
         {
             //ParallelProcessingofData.Run();
             //ParallelAggregation.Run();
-            ParallelInvocation.Run();
+            //ParallelInvocation.Run();
+            DynamicParallelism.Run();
             Console.ReadKey();
         }
     }
