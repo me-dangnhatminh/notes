@@ -11,7 +11,8 @@ namespace c5_dataflow_basics
     {
         static void Main(string[] args)
         {
-            LinkingBlocks.Run();
+            //LinkingBlocks.Run();
+            PropagatingErrors.Run();
             Console.ReadKey();
         }
     }
@@ -44,6 +45,65 @@ namespace c5_dataflow_basics
 
             multiplyBlock.Complete();
             await subtractBlock.Completion;
+        }
+    }
+}
+#endregion
+
+#region 5.2 Propagating Errors
+/* 5.2 Propagating Errors (lỗi lan truyền)
+ * Problem: Bạn cần một cách để phản hồi các lỗi có thể xảy ra trong lưới luồng dữ liệu của mình
+ */
+namespace c5_dataflow_basics
+{
+    class PropagatingErrors
+    {
+        public static async Task Run()
+        {
+            /* Bắt lỗi đơn thuần
+             */
+            //try
+            //{
+            //    var block = new TransformBlock<int, int>(item =>
+            //    {
+            //        if (item == 1) throw new InvalidOperationException("Blech.");
+            //        return item * 2;
+            //    });
+
+            //    block.Post(1);
+            //    await block.Completion; // Không có dòng này là try catch bên ngoài không thể bắt được lỗi
+            //}
+            //catch (InvalidOperationException ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //}
+
+            /* Truyền lỗi
+             */
+            try
+            {
+                var multiplyBlock = new TransformBlock<int, int>(item =>
+                {
+                    Console.WriteLine(item); // return 1
+                    if (item == 1) throw new InvalidOperationException("Blech.");
+                    return item * 2;
+                });
+
+                var subtractBlock = new TransformBlock<int, int>(item =>
+                {
+                    Console.WriteLine(item); // return 2
+                    if (item == 1) throw new InvalidOperationException("Blech.");
+                    return item - 2;
+                });
+                multiplyBlock.LinkTo(subtractBlock, new DataflowLinkOptions { PropagateCompletion = true }); // khi return ở multiplyBlock thì dữ liệu đó sẽ được truyền cho subtractBlock
+                multiplyBlock.Post(1);
+                //await subtractBlock.Completion;
+                await multiplyBlock.Completion;
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
