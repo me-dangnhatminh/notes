@@ -44,14 +44,14 @@ namespace c4_parallel_basics
         // Note: Đây không phải là cách triển khai hiệu quả
         static void ShowNumberParallel( IEnumerable<int> numbers)
         {
-            object i = 0;
+            object mutex = new object();
+            int i = 0;
             Parallel.ForEach(numbers, ( num, state ) =>
             {
-                lock(i)
+                lock(mutex)
                 {
-                    int index = Int32.Parse(i.ToString());
-                    Console.WriteLine($"[{index}]: " + num);
-                    i = index + 1;
+                    Console.WriteLine($"[{i}]: " + num);
+                    i++;
                 }
             });
         }
@@ -66,8 +66,8 @@ namespace c4_parallel_basics
             //};
             //RotateMatrices(matrices, 12);
 
-            //IEnumerable<int> nums = new List<int>() { 1,2,3,4,5,6,7,8,9,10 };
-            //ShowNumberParallel(nums);
+            IEnumerable<int> nums = new List<int>() { 1,2,3,4,5,6,7,8,9,10 };
+            ShowNumberParallel(nums);
         }
     }
 }

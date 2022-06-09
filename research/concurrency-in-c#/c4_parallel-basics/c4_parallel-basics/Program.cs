@@ -10,7 +10,8 @@ namespace c4_parallel_basics
     {
         public static void Main()
         {
-            ParallelProcessingofData.Run();
+            //ParallelProcessingofData.Run();
+            ParallelAggregation.Run();
             Console.ReadKey();
         }
     }
