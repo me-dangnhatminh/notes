@@ -15,7 +15,8 @@ namespace c5_dataflow_basics
             //LinkingBlocks.Run();
             //PropagatingErrors.Run();
             //UnlinkingBlocks.Run();
-            ThrottlingBlocks.Run();
+            //ThrottlingBlocks.Run();
+            ParallelProcessingwithDataflowBlocks.Run();
             Console.ReadKey();
         }
     }
@@ -150,7 +151,7 @@ namespace c5_dataflow_basics
 #endregion
 
 #region 5.4 Throttling Blocks
-/* 5.1 Throttling Blocks (Khối điều chỉnh)
+/* 5.4 Throttling Blocks (Khối điều chỉnh)
  * Problem: Ban có một kịch bản rẽ nhánh trong lưới luồng dữ liệu của mình và muốn dữ liệu chảy theo cách cân bằng tải (load-balancing)
  * Solution: By default, 
  */
@@ -176,6 +177,73 @@ namespace c5_dataflow_basics
 
             sourceBlock.LinkTo(targetBlockA);
             sourceBlock.LinkTo(targetBlockB);
+        }
+    }
+}
+#endregion
+
+#region 5.5 Parallel Processing with Dataflow Blocks
+/* 5.5 Parallel Processing with Dataflow Blocks
+ * Problem: Bạn muốn thực hiện một số xử lý song song trong lưới luồng dữ liệu của mình.
+ */
+namespace c5_dataflow_basics
+{
+    /* Theo mặc định, mỗi ddaataaflow block là độc lập với khối khác. Khi bạn liên kết hai khôi với nhau chúng sẽ xử lý độc lập.
+     * Vì vậy mỗi dataflow mesh sẽ có một số parallel tự nhiên được tích hợp sẵn.
+     */
+    class ParallelProcessingwithDataflowBlocks
+    {
+        /* Nếubạn cần phải vượt ra ngoài điều này — ví dụ, nếu bạn có một khối cụ thể thực hiện các phép tính nặng nề của CPU
+         * thì bạn có thể hướng dẫn khối đó hoạt động song song trên dữ liệu đầu vào của nó bằng cách đặt MaxDegreeOfParallelismtùy chọn.
+         * Theo mặc định, tùy chọn này được đặt thành 1, vì vậy mỗi khối luồng dữ liệu sẽ chỉ xử lý một phần dữ liệu tại một thời điể
+         */
+        public static async Task Run()
+        {
+            var multiplyBlock = new TransformBlock<int, int>(
+            item => item * 2,
+            new ExecutionDataflowBlockOptions
+            {
+                MaxDegreeOfParallelism = DataflowBlockOptions.Unbounded
+            });
+            var subtractBlock = new TransformBlock<int, int>(item => item - 2);
+            multiplyBlock.LinkTo(subtractBlock);
+
+        }
+    }
+    /* Discussion: 
+     * 
+     */
+}
+#endregion
+
+#region 5.6 Creating Custom Blocks
+/* 5.6 Creating Custom Blocks
+ * Problem: Bạn có logic có thể sử dụng lại mà bạn muốn đặt vào khối luồng dữ liệu tùy chỉnh.
+ * Làm như vậy cho phép bạn tạo các khối lớn hơn chứa logic phức tạp.
+ */
+namespace c5_dataflow_basics
+{
+    /* Theo mặc định, mỗi ddaataaflow block là độc lập với khối khác. Khi bạn liên kết hai khôi với nhau chúng sẽ xử lý độc lập.
+     * Vì vậy mỗi dataflow mesh sẽ có một số parallel tự nhiên được tích hợp sẵn.
+     */
+    class CreatingCustomBlocks
+    {
+        public static IPropagatorBlock<int, int> CreateMyCustomBlock()
+        {
+            var multiplyBlock = new TransformBlock<int, int>(item => item * 2);
+            var addBlock = new TransformBlock<int, int>(item => item + 2);
+            var divideBlock = new TransformBlock<int, int>(item => item / 2);
+
+            var flowCompletion = new DataflowLinkOptions { PropagateCompletion = true };
+            multiplyBlock.LinkTo(addBlock, flowCompletion);
+            addBlock.LinkTo(divideBlock, flowCompletion);
+
+            return DataflowBlock.Encapsulate(multiplyBlock, divideBlock);
+        }
+
+        public static async Task Run()
+        {
+
         }
     }
 }
