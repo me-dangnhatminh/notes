@@ -1,6 +1,10 @@
 # Portable Operating System Interface ( POSIX )
 
+Documents
+
 [https://www.baeldung.com/linux/posix](https://www.baeldung.com/linux/posix)
+
+[https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
 
 ## Overview
 
@@ -38,7 +42,7 @@ POSIX xác định các quy tắc để định dạng chuỗi mà chúng tôi s
 
 Ví dụ, giả sử chúng ta muốn xuất một chuỗi có chứa ngày hôm nay. Chúng tôi sẽ sử dụng tiện ích printf vì nó tuân theo tiêu chuẩn định dạng tệp POSIX:
 
->```
+>```bash
 >$ printf "Today's Date: %d %s, %d" 18 September 2021
 >Today's Date: 18 September, 2021
 >```
