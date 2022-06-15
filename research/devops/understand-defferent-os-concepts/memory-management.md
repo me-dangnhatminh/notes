@@ -40,3 +40,56 @@ Như đã giải thích ở trên, khi liên kết tĩnh được sử dụng, t
 
 Khi liên kết động được sử dụng, không bắt buộc phải liên kết mô-đun hoặc thư viện thực tế với chương trình, thay vào đó, tham chiếu đến mô-đun động được cung cấp tại thời điểm biên dịch và liên kết. Thư viện liên kết động (DLL) trong Windows và Đối tượng được chia sẻ trong Unix là những ví dụ điển hình về thư viện động.
 
+## Swapping
+
+Hoán đổi là một cơ chế trong đó một quá trình có thể được hoán đổi tạm thời khỏi bộ nhớ chính (hoặc di chuyển) sang bộ nhớ phụ (đĩa) và làm cho bộ nhớ đó khả dụng cho các quá trình khác. Vào một thời điểm sau, hệ thống sẽ hoán đổi quá trình từ bộ nhớ phụ sang bộ nhớ chính.
+
+Mặc dù hiệu suất thường bị ảnh hưởng bởi quá trình hoán đổi nhưng nó giúp chạy song song nhiều quá trình lớn và lớn và đó là lý do Swapping còn được gọi là một kỹ thuật nén bộ nhớ.
+
+![process swapping](../_src/images/memory-management/process_swapping.jpg)
+
+Tổng thời gian thực hiện bởi quá trình hoán đổi bao gồm thời gian cần thiết để di chuyển toàn bộ quá trình sang đĩa phụ và sau đó sao chép quá trình trở lại bộ nhớ, cũng như thời gian quá trình lấy lại bộ nhớ chính.
+
+Chúng ta hãy giả sử rằng quy trình của người dùng có kích thước 2048KB và trên đĩa cứng tiêu chuẩn nơi quá trình hoán đổi sẽ diễn ra có tốc độ truyền dữ liệu khoảng 1 MB mỗi giây. Quá trình chuyển 1000K thực tế đến hoặc từ bộ nhớ sẽ mất.
+
+```code
+2048KB / 1024KB per second
+= 2 seconds
+= 2000 milliseconds
+```
+
+Bây giờ, nếu tính đến thời gian trong và ngoài, thì sẽ mất 4000 mili giây hoàn thành cộng với các chi phí khác trong đó quá trình cạnh tranh để lấy lại bộ nhớ chính.
+
+## Memory Allocation
+
+Bộ nhớ chính thường có hai phân vùng
+
+- Low Memory: Hệ điều hành nằm trong bộ nhớ này.
+
+- High Memory: Các quy trình của người dùng được lưu giữ trong bộ nhớ cao.
+
+| SN | Memory Allocation | Description |
+| --- | --- | --- |
+| 1 | Single-partition allocation | Trong kiểu phân bổ này, lược đồ thanh ghi tái định cư được sử dụng để bảo vệ các tiến trình của người dùng với nhau và khỏi việc thay đổi mã và dữ liệu của hệ điều hành. Thanh ghi chuyển vị trí chứa giá trị của địa chỉ vật lý nhỏ nhất trong khi thanh ghi giới hạn chứa dải địa chỉ logic. Mỗi địa chỉ logic phải nhỏ hơn thanh ghi giới hạn. |
+| 2 | Multiple-partition allocation | Trong kiểu phân bổ này, bộ nhớ chính được chia thành một số phân vùng có kích thước cố định trong đó mỗi phân vùng chỉ nên chứa một tiến trình. Khi một phân vùng trống, một tiến trình được chọn từ hàng đợi đầu vào và được tải vào phân vùng miễn phí. Khi quá trình kết thúc, phân vùng sẽ có sẵn cho một quá trình khác. |
+
+## Fragmentation
+
+Khi các tiến trình được tải và xóa khỏi bộ nhớ, không gian bộ nhớ trống bị chia thành nhiều phần nhỏ. Điều đó xảy ra sau khi đôi khi các tiến trình không thể được cấp phát cho các khối bộ nhớ vì kích thước nhỏ của chúng và các khối bộ nhớ vẫn chưa được sử dụng. Vấn đề này được gọi là Phân mảnh.
+
+Phân mảnh có hai loại
+
+| SN | Fragmentation  | Description |
+| --- | --- | --- |
+| 1 | External fragmentation | Tổng không gian bộ nhớ đủ để đáp ứng một yêu cầu hoặc để chứa một tiến trình trong đó, nhưng nó không liền kề, vì vậy nó không thể được sử dụng. |
+| 2 | Internal fragmentation | Khối bộ nhớ được gán cho quá trình lớn hơn. Một số phần của bộ nhớ không được sử dụng vì nó không thể được sử dụng bởi một quá trình khác. |
+
+Sơ đồ sau đây cho thấy cách phân mảnh có thể gây ra lãng phí bộ nhớ và một kỹ thuật nén có thể được sử dụng để tạo ra nhiều bộ nhớ trống hơn từ bộ nhớ bị phân mảnh.
+
+![](../_src/images/memory-management/memory_fragmentation.jpg)
+
+Tổng thời gian thực hiện bởi quá trình hoán đổi bao gồm thời gian cần thiết để di chuyển toàn bộ quá trình sang đĩa phụ và sau đó sao chép quá trình trở lại bộ nhớ, cũng như thời gian quá trình lấy lại bộ nhớ chính.
+
+Chúng ta hãy giả sử rằng quy trình của người dùng có kích thước 2048KB và trên đĩa cứng tiêu chuẩn nơi quá trình hoán đổi sẽ diễn ra có tốc độ truyền dữ liệu khoảng 1 MB mỗi giây. Quá trình chuyển 1000K thực tế đến hoặc từ bộ nhớ sẽ mất.
+
+...
