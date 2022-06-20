@@ -89,3 +89,83 @@ sudo systemctl start apache2
 ```
 
 ## **2.4 Managing Process Priority**
+
+```bash
+nice -19 yes > /etc/null &
+# nice dùng để set sự ưu tiên cho tiến trình
+# khi call lệnh top, sẽ có một row là NI, cột này hiển thị sự ưu tiên
+
+renice 15 -p 1211
+# 15 là số ưu tiên
+# 1211 là PID
+```
+
+# **3 Working With Usres and Group in Linux**
+
+- Account data
+- Access control
+- Access activity data
+- Managing accounts
+- Managing groups
+
+## **3.2 Understand linux user**
+
+### Admin Powers: Best practices (Quyền hạn quản trị)
+
+- Avoid using the root account (Tránh sử dụng tài khoản root)
+- Creating unique accounts for each user (Tạo tài khoản duy nhất cho mỗi người dùng)
+- Assign only necessay authority to each user (Chỉ chỉ định quyền cần thiết cho mỗi người dùng)
+- Use admin power only via sudo (Chỉ sử dụng quyền admin thông qua sudo)
+
+```bash
+sudo cat /etc/shadow
+# thư mục chứa mật khẩu
+
+sudo cat /etc/passwd
+# dangnhatminh:x:1000:1000:dangnhatminh,,,:/home/dangnhatminh:/bin/bash
+# 1 - dangnhatminh - cho biết username
+# 2 - x - cho biết sự tồn tại của pass trong tệp shadow
+# 3,4 - 1000:1000 - là id user và id group
+
+sudo cat /etc/group
+# liệt kê các group
+
+id dangnhatminh
+# hiển thị thông tin của người dùng dangnhatminh
+
+who
+# cho biết người dùng hiện tại đang đăng nhập
+
+w
+# cho ta biết ai đăng nhập và cả việc họ đang làm
+
+last
+# nhập ký đăng nhập từ đầu tháng
+```
+
+### **Adminstrating Users and Groups**
+
+```bash
+sudo useradd -m username
+# -m : tạo một thư mục mới trong home tree (/home/username)
+
+cd /etc/skel
+# Thư mục xương, nghĩa là bất kỳ nếu tạo một người dùng mới nó nó sẽ có cá thư mục tương tự /etc/skel -> /home/user sẽ giống /etc/skel khi mới tạo
+
+sudo passwd username
+# dùng để thiết lập passwd cho người dùng
+
+sudo groupadd groupname
+# tạo một group 
+
+sudo chown :groupname /var/secret
+# dùng để set group cho thư mục secret
+
+sudo usermod -a -G groupname username
+# addgroup cho người dùng
+# nghĩa là người dùng sẽ có quyền đối với group này
+
+sudo chmod g+wer /var/sercet
+```
+
+## **4 Securing your linux server**
