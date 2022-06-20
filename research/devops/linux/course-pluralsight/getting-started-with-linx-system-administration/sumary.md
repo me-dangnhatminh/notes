@@ -166,6 +166,66 @@ sudo usermod -a -G groupname username
 # nghĩa là người dùng sẽ có quyền đối với group này
 
 sudo chmod g+wer /var/sercet
+
+groups username
+# xem người dùng thuộc group nào
+
+deluser username
+deluser --remove-home newuser
+# xóa một người dùng, --remove-home sẽ xóa luôn thư mục được tạo trong /home
+
+visudo
 ```
 
-## **4 Securing your linux server**
+# **4 Securing your linux server**
+
+## **4.1 Module Introduction**
+
+- Permissions
+- Software patches
+- Managing network port
+- Data encryption
+
+### **Applying object Permissions**
+
+```bash
+su username
+# chuyển đổi người dùng
+
+ls -dl
+# -d sẽ liệt kê các thuộc tính
+```
+
+### **Extending Object Usability**
+
+```bash
+sudo chomod +t foldername|filename
+# +t 
+
+sudo ln -s /home/dangnhatminh/scripts/myscript.sh /var/secret
+# Tạo một liên kết
+```
+
+### **Hardening Your Server**
+
+- Reducing vulnerability (giảm tính sẽ bị tồn thương)
+- Patching systems (Hệ thống vá lỗi)
+- Understanding network ports
+
+[https://wiki.debian.org/Team/Dpkg](https://wiki.debian.org/Team/Dpkg)
+
+```bash
+nmap -v -sT localhost
+# phải install package nmap
+# Quét bằng giao thức tcp để tìm các port đang mở
+nmap -v -sT google.com
+```
+
+### **Data Encryption**
+
+- Why encrypt
+- Disk encryption
+- SSL/TSL encryption
+- Email encryption
+
+# **5 Working with Docker and Linux Container**
