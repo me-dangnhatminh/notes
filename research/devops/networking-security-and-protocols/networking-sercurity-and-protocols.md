@@ -135,3 +135,28 @@ Dữ liệu sau đó sẽ nhấn vào lớp vận chuyển của người gửi,
 Khi máy tính của cô Palmer nhận được luồng bit thông qua một phương tiện vật lý (như wifi của cô), dữ liệu sẽ chảy qua cùng một loạt các lớp trên thiết bị của cô, nhưng theo thứ tự ngược lại. Đầu tiên, lớp vật lý sẽ chuyển đổi BITSTREAM từ 1 và 0 thành các khung được chuyển sang lớp liên kết dữ liệu. Lớp liên kết dữ liệu sau đó sẽ lắp lại các khung vào các gói cho lớp mạng. Lớp mạng sau đó sẽ tạo các phân đoạn ra khỏi các gói cho lớp vận chuyển, điều này sẽ sắp xếp lại các phân đoạn thành một phần dữ liệu.
 
 Dữ liệu sau đó sẽ chảy vào lớp phiên của người nhận, sẽ truyền dữ liệu theo lớp trình bày và sau đó kết thúc phiên giao tiếp. Lớp trình bày sau đó sẽ loại bỏ nén và chuyển dữ liệu thô lên lớp ứng dụng. Lớp ứng dụng sau đó sẽ cung cấp dữ liệu có thể đọc được của con người cho phần mềm email của cô Palmer, điều này sẽ cho phép cô đọc email của ông Cooper trên màn hình máy tính xách tay của mình.
+
+# 4 Protocols and Port Numbers
+
+- Application Layer Protocols
+  - Data Transfer Protocol (DTP)
+  - Authentication Protocol (AP)
+  - Network Services Protocol (NSP)
+  - Network Management Protocol (NMP)
+  - Audio/Visual Protocol (AV)
+
+## 4.1 Transferring Data: HTTP or HTTPS
+
+Hypertext Transfer Protocol (secure)
+
+| Layer | | |
+| --- | --- | --- |
+| Application Layer (7) | HTTP | HTTPs |
+| Transport Layer (4) | 80 | 443 |
+
+## 4.2 File Transfer: FTP, sFTP, TFTP and SMB
+
+| Layer | | | | |
+| --- | --- | --- | --- | --- |
+| Application Layer (7) | FTP | sFTP | TFTP | SMB |
+| Transport Layer (4) | 20 21 | 22 | 69 | 445 |
