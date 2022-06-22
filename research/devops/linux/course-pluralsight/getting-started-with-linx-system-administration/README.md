@@ -149,6 +149,9 @@ last
 sudo useradd -m username
 # -m : tạo một thư mục mới trong home tree (/home/username)
 
+sudo adduser username
+# adduser sẽ hỏi thêm các thông tin (pass, fullname, phone) trong quá trình tạo
+
 cd /etc/skel
 # Thư mục xương, nghĩa là bất kỳ nếu tạo một người dùng mới nó nó sẽ có cá thư mục tương tự /etc/skel -> /home/user sẽ giống /etc/skel khi mới tạo
 

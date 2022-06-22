@@ -160,3 +160,5 @@ Hypertext Transfer Protocol (secure)
 | --- | --- | --- | --- | --- |
 | Application Layer (7) | FTP | sFTP | TFTP | SMB |
 | Transport Layer (4) | 20 21 | 22 | 69 | 445 |
+
+TFTP: tiny FTP, truyền tệp nhỏ, nên dùng trong trường hợp cần truyền file nhỏ như file conf vì nó k cần phải lo về bảo mật và tường lửu (k yêu cầu username và passwd)
