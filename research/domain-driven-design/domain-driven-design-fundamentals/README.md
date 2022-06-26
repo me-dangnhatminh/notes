@@ -99,3 +99,7 @@ Trò chuyện với chuyên gia miền: Khám phá miền và các miền phụ 
 - Visit records (Truy cập hồ sơ)
 - Appointments Scheduleing (Lên lịch cuộc hẹn)
 - Sales (Việc bán hàng)
+
+## 3.5 Conversation with a Domain Expert: Exploring the Scheduling Subdomain
+
+Trò chuyện với chuyên gia miền: Khám phá miền phụ lập lịch
