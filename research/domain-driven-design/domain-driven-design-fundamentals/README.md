@@ -151,3 +151,37 @@ Sử dụng ngữ cảnh bị ràng buộc để gỡ rối các khái niệm d�
 
 - Subdomain: is a problem space concept
 - Bounded Context: is a solution space concept
+
+### Problem space and Solution space
+
+![](./assets/images/problem-space-and-solution-space.png)
+Ở ví dụ trên
+
+- (Hình 1) The room là một không gian có vấn đề, vì vậy nó giống như một miền phụ.
+- (Hình 2) Bạn có thể lắp một tấm thảm tường phù hợp với hình dạng của căn phòng một cách hoàn hảo, điều này giống như khi miền phụ và ngữ cảnh bị giới hạn bao gồm cùng một thứ.
+- (Hình 3) Nhưng, bạn có thể chỉ sử dụng một số thảm khu vực để trải sàn và thảm khu vực giải quyết được vấn đề. Chúng che phủ một phần sàn nơi bạn đi lại. Điều này giải quyết được vấn đề tuy nhiên nó không khớp với hình dạng của căn phòng
+
+## 3.8 Introducing Context Maps
+
+- Context Map: demonstrates how bounded context connect to one another while supporting communication between teams. (thể hiện cách ngữ cảnh có giới hạn kết nối với nhau trong khi hỗ trợ giao tiếp giữa các nhóm)
+
+![](./assets/images/context-maps.png)
+
+- Ta sẽ có 2 context là Application Scheduler và Billing
+- Mỗi context sẽ có database riêng
+- Và dùng Shared kernel để chia sẻ những mối quan tâm xuyên suốt
+
+![](./assets/images/some-common-patterns-for-data-async.png)
+
+## 3.9 Specifying Bounded Context in our Application
+
+## 3.10 Reviewing Important Concepts from This Module
+
+- Problem Domain: The specific problem the software you're working on is trying to solve. (Vấn đề cụ thể mà phần mềm bạn đang làm việc đang cố gắng giải quyết)
+- Core Domain: The key difference for the custemer's business something they must do well and cannot outsource. (Điểm khác biệt quan trọng đối với hoạt động kinh doanh của người bán hàng là họ phải làm tốt và không thể thuê ngoài).
+- Subdomains: Separate application or features your software must support or interact with. (Ứng dụng hoặc tính năng riêng biệt mà phần mềm của bạn phải hỗ trợ hoặc tương tác với)
+- Bounded Context: A specific responsibility, with explicit boundaries that separate it from other parts of the system. (Một trách nhiệm cụ thể, có ranh giới rõ ràng ngăn cách nó với các phần khác của hệ thống)
+- Context Mapping: the process of identifying bounded contexts and their relationships to one another. (Quá trình xác định các bối cảnh bị ràng buộc và mối quan hệ của chúng với nhau)
+- Shared Kernel: Part of the model that is shared by two or more teams, who agree not to change it without collaboration. (Một phần của mô hình được chia sẻ bởi hai hoặc nhiều nhóm, những người đồng ý không thay đổi mô hình mà không có sự cộng tác).
+
+# 4 Elements of a Domain Model
