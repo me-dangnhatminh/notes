@@ -185,3 +185,68 @@ Sử dụng ngữ cảnh bị ràng buộc để gỡ rối các khái niệm d�
 - Shared Kernel: Part of the model that is shared by two or more teams, who agree not to change it without collaboration. (Một phần của mô hình được chia sẻ bởi hai hoặc nhiều nhóm, những người đồng ý không thay đổi mô hình mà không có sự cộng tác).
 
 # 4 Elements of a Domain Model
+
+- The domain layer in your software
+- Focusing on behviors in a model
+- Rich domain models vs. anemic domain models
+- Entity in a domain model
+- Different entities with complex needs from those needing only CRUD
+
+## 4.1 The important of Understanding DDD terms
+
+Entity & Context are Common Software Terms
+
+|  | Entity Framework Core | Domain-Driven Design |
+|---|---|---|
+|Entity| Một class model data với một key được ánh xạ tới một bảng trong cơ sở dữ liệu | Một domain class có danh tính (identity) để theo dõi
+|Context|Một DbContext class cung cấp quyền truy cập vào các yêu cầu và xác định cách các entities ánh xạ tới cơ sở dữ liệu|Một Bounded Context xác định phạm vi và ranh giới của một subnet của một domain|
+
+- Object-sValue:
+
+## Tập trung vào Domain
+
+- Chuyển tư duy từ DB-Driven sang Domain-Driven
+  - Thiết kế phần mềm dựa trên nhu cầu lưu trữ dữ liệu
+  - Thiết kế phần mềm dựa trên nhu cầu kinh doanh
+
+> The Domain Layer chiệu trách nhiệm đại diện cho các khái niệm về doanh nghiệp, thông tin về tình hình kinh doanh và các quy tắc kinh doanh. Trạng thái phản ánh tình hình kinh doanh được kiểm soát và sử dụng ở đây, mặc dù các chi tiết kỹ thuật của việc lưu trữ nó được ủy quyền cho cơ sở hạ tầng. Layer này của domain là trái tim của business software
+
+### Tập trung vào hành vi (behaviors), không phải thuộc tính
+
+- Ví dụ về hành vi
+  - Lên lịch một cuộc hẹn để kiểm tra sức khỏe
+  - Đặt phòng
+  - Tạo một mục lịch trình trên lịch của bác sĩ.
+  - Vì vậy lên lịch cuộc hẹn không đơn giản chỉ là thiết lập các thuộc tính của đối tượng liên quan, thời gian hẹn và danh tính của vật nuôi mà chúng ta đang đặt lịch hẹn. Thay vào đó chúng ta đang nói về cách hệ thống hoạt động để đáp ứng với việc sắp xếp một cuộc hẹn. (Bên dưới là các tính năng được bổ sung khi suy nghĩ theo hướng hành vi)
+  - Note trọng lượng vật nuôi
+  - Gửi yêu cầu tới phòng lab
+  - Thông báo cho chủ nhân
+  - Châp nhận bệnh nhân mới
+
+### Xác định các event dẫn đến hiểu các behaviors
+
+- Ví dụ về hành vi as Event
+
+![](./assets/images/event-modeling.png)
+
+## 4.4 So sánh Anemic and Rich Domain Models
+
+- Domain Model Types
+  - Anemic: là mô hình miền tập trung vào trạng thái của các đối tượng của nó (Nếu CURD là đủ thì có thể dùng)
+    - **Nhận biết Anemic Model**: Triệu chứng cơ bản của một mô hình thiếu máu là lúc đầu nó trông như thật. Có những đối tượng được đặt tên theo danh từ trong domain namespace và những đối tượng này được kết nối với các mối quan hệ về cấu trúc phong phú mà các mô hình miền thực sự có.
+    - Lợi ích khi bạn nhìn vào hành vi và bạn nhận ra rằng hầu như không có bất kỳ hành vi nào trên những vật thể này khiến chúng không chỉ là những túi nhỏ với setters và getterss.
+    - Thật vậy các mô hình này thường đi kèm với các quy tắc thiết kế nói rằng bạn không được đặt bất kỳ domain logic nào vào các đối tượng miền. Thay vào đó có một tập hợp các đối tượng service sẽ nắm bắt tất cả logic domain
+  - Rich: Các rich domain models sẽ đại diện cho các hành vi và logic kinh doanh của miền của bạn, các lớp chỉ ảnh hưởng đến trạng thái được coi là một mô hình chống đối trong một số mô hình miền và do đó nhận được cái mác khó chịu là Anemic. Mặc dù chúng hoàn toàn ổn trong model CRUD
+
+## 4.5 Hiểu Entities
+
+### 2 loại đối tượng trong DDD
+
+- Được xác định bởi một identity (danh tính) - Entity
+- Được xác định bởi các value của nó
+
+### Entites có danh tính và có thể thay đổi
+
+![](./assets/images/entites-in-the-appointment-scheduling-context.png)
+
+![](./assets/images/complex-entities-vs-read-only-entities-in-scheduling-context.png)
