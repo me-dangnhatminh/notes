@@ -250,3 +250,60 @@ Entity & Context are Common Software Terms
 ![](./assets/images/entites-in-the-appointment-scheduling-context.png)
 
 ![](./assets/images/complex-entities-vs-read-only-entities-in-scheduling-context.png)
+
+# 5 Understanding Value Object & Service in The Model
+
+## 5.1 Getting Acquainted With Value Object (Làm quen với Object-Value)
+
+- Nó là một đối tượng được sử dụng để do lường, định lượng hoặc mô tả một cái gì đso trong miền của bạn.
+- Thay vì có một khóa nhận dạng, danh tính của nó dựa trên thành phần của các giá trị của tất cả thuộc tính của nó, bởi vì các giá trị thuộc tính xác định một đối tượng giá trị
+- Nó phải là bất biến.
+- So sánh bằng cách sử dụng tất cả các giá trị
+- Các Object-Value có thể có methods và behavior nhưng chúng không bao giờ có tác dụng phụ
+
+### Đưa Value-object vào context cho nhà phát triển .net
+
+![](./assets/images/putting-value-object-into-context-for-net-dev.png)
+
+### Recognizing Commonly Used Value-object (Nhận biết đối tượng giá trị thường được sử dụng)
+
+- String is a value-object: String methods tôn trọng tính bất biến
+  - Replace(strA, strB): **return a new string**
+  - ToUpper(): **return a copy** của string này được chuyển thành chữ hoa
+  - ToLower(): **return a copy** ...
+- Money is a great value object
+- DateTimeRange as value object
+
+![](./assets/images/date-time-range-as-value-object.png)
+
+### When Considering Domain Object
+
+- Our Instinct
+  - 1. Probably an entity
+  - 2. Maybe a value object
+
+## 5.4 Getting More Insight from Eric Evans and Vaughn Vernon
+
+### Explicit ID value Objects instead of Ints/GUIDs (Giá trị ID rõ ràng Đối tượng thay vì Ints / GUIDa)
+
+## 5.7 Review and Resources
+
+- Domain-Driven Design in c#9: Immutable Value Objects: <https://www.pluralsight.com/blog/software-development/domain-driven-design-csharp>
+- Support for Value Objects: ardals.com/support-for-value-objects-in-csharp
+- Vaughn Vernon Website: <https://www.hugedomains.com/domain_profile.cfm?d=ardals.com>
+- Eric Evans Website <https://www.domainlanguage.com>
+
+# 6 Tackling Complexity With Aggregates (Giải quyết sự phức tạp với Aggregate)
+
+## 6.3 Introduction Aggregates and Aggregate Roots
+
+### Các thay đổi dữ liệu với Aggregates phải tuân theo ACID
+
+- **A**tomic: Nguyên tử
+- **C**onsistent: Nhất quán
+- **I**solated: Cô lập
+- **D**urable: Bền chặt
+
+### Aggregates Roots chịu trách nhiệm duy trì các yếu tố bất biến
+
+- Aggregates là một cụm (cluster) các đối tượng liên kết mà chúng ta coi như một đơn vị nhằm thay đổi dữ liệu
