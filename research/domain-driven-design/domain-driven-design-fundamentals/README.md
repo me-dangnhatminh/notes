@@ -307,3 +307,24 @@ Entity & Context are Common Software Terms
 ### Aggregates Roots chịu trách nhiệm duy trì các yếu tố bất biến
 
 - Aggregates là một cụm (cluster) các đối tượng liên kết mà chúng ta coi như một đơn vị nhằm thay đổi dữ liệu
+
+## 6.13 Review and Resources
+
+### Key Terms from this Module
+
+- Aggregate: Là một nhóm các đối tượng liên quan hoạt động cùng nhau trong một transactional
+- Aggregate Root: Là entry point (điểm vào) mà qua đó bạn thực hiện bất kỳ công việc nào với aggregate, và root cũng là nơi chịu trách nhiệm đảm bảo rằng tất cả các rule áp dụng co biểu đồ đối tượng đo đều được đáp ứng
+- Invariant: Một điều kiện luôn đúng để hệ thống ở trạng thái nhất quán
+- Associations: Là một Modeled relationship giữa các entities
+- Navigation Properties: Một thuật ngữ ORM để mô tả các thuộc tính tham chiếu đến đối tượng liên quan
+- Unidirectional Relationships: (Mối quan hệ một chiều) Associations giữa hai thực thể chỉ có thể được điều hướng trong một thao tác
+
+### Key Takeaways (Những điều quan trọng)
+
+- Avoid big ball of mud models
+- Break the model up into aggregates (Chia model thành các aggregates)
+- An aggregate represents a graph of objects in a transaction (một tổng thể đại diện cho một đồ thị của các đối tượng trong một giao dịch)
+- Aggregates encapsulate business rules and invariants (Tổng hợp đóng gói các quy tắc kinh doanh và các bất biến)
+- One-way relationships when modeling associations
+
+# 7 Working with Repositories
