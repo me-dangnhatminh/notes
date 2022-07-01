@@ -328,3 +328,85 @@ Entity & Context are Common Software Terms
 - One-way relationships when modeling associations
 
 # 7 Working with Repositories
+
+- Define Repositories
+- Tips for designing repositories
+- Benefits of repositories
+- Pros and cons of interfaces and generic repos
+- Specification pattern to aid repositores
+- Repository implementations in our app
+
+## 7.2 Instroducing Repository
+
+### Persisting Object
+
+![](./assets/images/persisting-object.png)
+
+### Object life cycle
+
+]
+![](./assets/images/object-life-cycles.png)
+
+- Có thể sử dụng Repository để quản lÝ vòng đời của các persisted object.
+
+- Chúng tôi gọi các đối tượng này là **Persistence Ignorance**
+- Business Object không có logic nào liên quan đến cách dữ liệu được lưu trữ và truy xuất.
+
+## 7.3 Repository Benefits (Lợi ích của repositories)
+
+- Cung cấp khái niệm trừu tương chung cho tất cả các mối quan tâm về persistence.
+- Promotes separation of concerns (Thúc đẩy tách biệt các mối quan tâm), cả logic domain và interfaces đều có thể thay  đổi độc lập với dữ liệu trong nguồn dữ liệu được ứng dụng sử dụng.
+- Truyền đạt các quyết định thiết kế, chỉ một số đối tượng nhất định mới được truy cập  trực tiếp do đó repository cung cấp và kiểm soát quyền truy cập này.
+
+## 7.4 Repository Tips
+
+- Think of it as an in-memory collection (Hãy coi nó như một bộ sưu tập trong bộ nhớ)
+
+- Implement một common access interface
+
+  ```csharp
+  public interface IRepository<T> {
+    T GetById(int id);
+    void Add (T entity);
+    void Remove (T entity);
+    void Update (T entity);
+    INumerable<T> List();
+  }
+  ```
+
+- Include methods to add and remove
+
+```csharp
+public void Insert(TEntity entity) {
+  _db.Add(entity);
+  _context.SaveChanges();  
+}
+
+public void Delete(int id) {
+  var entityToDelete = _dbSet.Find(id);
+  _db.Remove(entityToDelete);
+  _context.SaveChanges()
+}
+```
+
+- Custom Query Implementation using EF core
+
+```csharp
+public Schedule GetScheduleForDateWithAppointments(int clincId, DateTimeOffset date) {
+  var endDate = date.AddDays(clincId);
+  var schedule = _dbContext.Set<Schedule>().Include(s => s.Appointments.Where(a => a.TimeRange.Start > date && a.TimeRange.End < endDate)).FirstOrDefault(schedule => schedule.CincId == clincId);
+  return schedule;
+}
+```
+
+- Get a Client with Their Patients
+
+```csharp
+public Client GetClientByIdWithPatients(int clincId){
+  var client = _dbContext.Get<Client>().Include(e => e.Patients).FirstOrDefault(client => client.Id == clincId);
+
+  return client;
+}
+```
+
+## 7.5 Avoiding Repository Blunders (Tránh sai lầm về kho lưu trữ)
