@@ -410,3 +410,26 @@ public Client GetClientByIdWithPatients(int clincId){
 ```
 
 ## 7.5 Avoiding Repository Blunders (Tránh sai lầm về kho lưu trữ)
+
+> Client code có thể không biết về triển khai repository. Nhưng developers không thể không biết
+
+### Problems Caused by Repository Logic
+
+- Query N + 1
+
+  ```csharp
+  var clients = _context.Clients.ToList();
+  foreach (var client in clients) {
+    _context.Patients.Where( p => p.ClientID == client.Id).ToList();
+  }
+  // Nhớ tránh lỗi này
+  ```
+
+- Sử dụng eager hoặc lazy loading không thích hợp
+- Fetching nhiều data than required
+
+### Profiling Database có thể làm nảy sinh nhiều vấn đề
+
+## 7.6 Addressing the debates about using repositories
+
+Giải quyết các cuộc tranh luận về việc sử dụng kho lưu trữ
