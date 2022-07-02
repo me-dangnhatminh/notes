@@ -433,3 +433,67 @@ public Client GetClientByIdWithPatients(int clincId){
 ## 7.6 Addressing the debates about using repositories
 
 Giải quyết các cuộc tranh luận về việc sử dụng kho lưu trữ
+
+## 7.7 Returning IQueryables: Pros and Cons
+
+Các Repository có nên trả về IQueryables hay không: **Yes**
+Tuy nhiên vẫn có bất lợi:
+
+- Về cơ bản Query Logic vẫn thật sự là Business Logic nền điều này sẽ làm rò rĩ rất nhiều chi tiết triển khai và có xung hướng đặt các business rules để truy vấn trên toàn bộ ứng dụng.
+
+### Đặt logic truy vấn ở đâu
+
+![](./assets/images/where-is-query-logic-define.png)
+
+- Khi trả về IQueryables nghĩa là các class cũng có thể chỉnh sửa lệnh truy vấn trước khi thực thi
+
+### Returning IQueryables from Repository
+
+- The Good
+  - Flexibility: Linh hoạt
+  - Có thể tạo truy vấn từ nhiều vị trí
+  - Yêu cầu mã kho lưu trữ tối thiểu
+  - Hạn chế dữ liệu trả về chỉ những gì cần thiết
+
+- The Bad and The Ugly
+  - Query đó đã được phổ biến khắp mọi nơi
+  - Vi phạm nguyên tắc trách nhiệm duy nhất
+  - Mã biên dịch, nhưng sẽ nổ tung khi thực thi, nghĩa là nếu thêm code mà EF không thể biên dịch sang sql thì sẽ bị ném exeption
+
+### Có một cách khắc phục các vấn đề này
+
+Accept arbitrary perdicates thay vì trả về IQueryables
+
+![](./assets/images/accept-arbitrary-predicates.png)
+
+Phương pháp trên sẽ khắc phục được vấn đề biên dich sql tuy nhiên vẫn gặp nhiều vấn đề.
+
+Bên dưới là một phương pháp chung
+
+![](./assets/images/one-common-solution-custom-query-mothods.png)
+
+## 7.8 Considering Generic Repositories and Interfaces
+
+Xem xét Kho lưu trữ và Giao diện Chung
+
+### Generic Repositories Benefits
+
+- Thúc đẩy tái sử dụng mã
+
+- Ràng buộc chung có thể bảo vệ Aggregates
+
+- Vẫn có sự đánh đổi
+  - Điều gì sẽ xảy ra nếu bạn có một số Aggregates nhất định không bao giờ xóa, nhưng kho lưu trữ chung của bạn lại bao gồm một phương thức xóa
+
+- Có thể tạo một mã chung
+![](./assets/images/ireposistory-may-lead-to-unused-method.png)
+- Hoặc có tách ra
+![](./assets/images/a-targeted-ischedulerepo-with-relevant-method.png)
+
+Phương pháp khác
+![](./assets/images/generic-repo-for-aggregate-roots.png)
+
+![](./assets/images/generic-repo-for-crud-work.png)
+![](./assets/images/marker-interfaces-can-provide-protection-to-your-aggregetes.png)
+
+### **Command Query Reponsibility Segregation (CQRS)**
