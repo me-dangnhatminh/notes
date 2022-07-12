@@ -497,3 +497,27 @@ Phương pháp khác
 ![](./assets/images/marker-interfaces-can-provide-protection-to-your-aggregetes.png)
 
 ### **Command Query Reponsibility Segregation (CQRS)**
+
+# 8 Adding in Domain Events and Anti-corruption Layers
+
+Thêm Events và Anti-corruption (Chống tham nhũng)
+
+# 8.1 Introduction and Overview
+
+- Introduction domain events
+- Identifying domain events (Xác định các sự kiện miền trong hệ thống)
+- Designing domain events (Thiết kế miền sự kiện)
+- Introduction anti-corruption layers
+
+# 8.2 Introduction Domain Events
+
+- Domain events là một phần quan trọng của bounded contexts
+- Chúng cung cấp một cách để mô tả các hoạt động quan trọng hoặc các thay đổi trạng thái xảy ra trong hệ thống
+
+> Chúng ta nên sử dụng một domain events để nắm bắt sự xuất hiện của một điều gì đó đã xảy ra trong domain
+
+> Không bao giờ xây dựng hành vi của bạn xung quanh các ngoại lệ được ném ra từ các trình xử lý sự kiện
+
+...
+
+# 9 Chưa học
