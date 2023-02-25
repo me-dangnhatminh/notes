@@ -54,3 +54,14 @@ String name = scanner.nextLine();
  String name = JOptionPane.showInputDialog("Your name");
  JOptionPane.showMessageDialog(null, "Your name");
 ```
+
+## Basic Tools and Frameworks
+
+Giới thiệu Mocking với Mockito
+
+- Testing tốt và dễ dàng bảo trì
+
+- Để viết testing tốt trong ứng dụng nhiều lớp
+
+  - Opt 1: Stubs
+  - Opt 2: Mocks
